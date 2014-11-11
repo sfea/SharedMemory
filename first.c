@@ -48,8 +48,6 @@ int main(int argc, char** argv)
 	
 	size = strlen(array);
 
-	printf("%d\n", size);
-
 	if ((key = ftok(FILE_2, 0)) < 0)
 	{
 		perror("ftok");
