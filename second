@@ -34,8 +34,6 @@ int main()
 	}
 
 	new_write(buf, STDOUT_FILENO); 
-	
-	//printf("%s", (char*)buf);
 
 	if (shmdt(buf) < 0)
 	{
