@@ -15,7 +15,7 @@
 int main(int argc, char** argv)
 {
 	key_t key;
-  int shmid;
+  	int shmid;
 	int size;
 	int pipefd[2] = {0};
 	int pp = pipe(pipefd);
@@ -45,19 +45,7 @@ int main(int argc, char** argv)
 	close(pipefd[1]);
 
 	new_read(pipefd[0], array);
-
-/*	for (i = 1;;i++)
-	{
-		re = read(pipefd[0], array, AR_SIZE);
-		if (re == AR_SIZE)
-			array = (char*)realloc(array, i*AR_SIZE);
-		else
-		{
-			array = (char*)realloc(array, (i - 1)*AR_SIZE + re);
-			break;
-		}
-	}
-*/
+	
 	size = strlen(array);
 
 	printf("%d\n", size);
